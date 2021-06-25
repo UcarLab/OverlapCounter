@@ -74,7 +74,7 @@ def getOverlaps(reads, expectedoverlap):
     for i in range(0, len(runningsum)):
         if withinsegment:
             if runningsum[i] <= expectedoverlap:
-                rv.append([chromosome, segmentstart, runningsumpos[i-1], minoverlap, maxoverlap])
+                rv.append([chromosome, segmentstart, runningsumpos[i], minoverlap, maxoverlap])
                 withinsegment = False
                 segmentstart = -1
                 minoverlap = -1
